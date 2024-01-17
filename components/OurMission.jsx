@@ -16,7 +16,7 @@ const OurMission = () => {
             ethics.
           </p>
         </div>
-        <div className="flex justify-center">
+        <div data-aos="fade-right" className="flex justify-center">
           <img
             src="./assists/onboard.png"
             className="lg:w-[650px] w-[90%]"
@@ -25,8 +25,8 @@ const OurMission = () => {
         </div>
         <div className="ps-8 lg:block hidden">
           <h2 className="text-[40px] font-bold ">Our Mission</h2>
-          <p className="text-[25px]">
-            Our Mission The IT industry is dedicated to making technology work
+          <p className="text-[25px] text-justify  mt-6">
+            The IT industry is dedicated to making technology work
             for everyone, enabling new possibilities, fostering collaboration,
             and sparking imagination in a secure, ethical, and sustainable way.
             This new mission emphasizes the role of the IT industry in advancing

@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyJoin = () => {
   return (
-    <div className="bg-[#F8F8F8] text-center py-[3rem] lg:py-[6rem] ">
+    <div data-aos-duration="3000" data-aos="fade-up" className="bg-[#F8F8F8] text-center py-[3rem] lg:py-[6rem] ">
       <div className="flex flex-col items-center">
         <h1 className="text-[30px] lg:text-[60px] font-bold  ">
           WHY JOIN FUNSOL?

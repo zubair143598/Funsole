@@ -2,7 +2,7 @@ import React from 'react'
 
 const Message = () => {
   return (
-    <div className='bg-[#FFFDF4] text-center py-[3rem] lg:py-[6rem] '>
+    <div data-aos-duration="3000" data-aos="fade-up" className='bg-[#FFFDF4] text-center py-[3rem] lg:py-[6rem] '>
         <div className='flex flex-col items-center'>
             <h1 className='text-[30px] lg:text-[60px] font-bold  '>MESSAGE FROM MR. TANVIR AHMED</h1>
             <img src="./assists/CEO.png" className='w-[300px] mt-14 p-3' alt="" />

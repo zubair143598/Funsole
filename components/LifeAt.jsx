@@ -15,10 +15,10 @@ const LifeAt = () => {
             Pakistan.
           </p>
         </div>
-        <div className="lg:w-[40%] flex justify-center">
+        <div data-aos="fade-left" duration={5000} className="lg:w-[40%] flex justify-center">
           <img src="./assists/team1.png" className="w-[90%]" alt="" />
         </div>
-        <div className="lg:w-[20%] gap-y-6 flex flex-col items-center">
+        <div  data-aos="fade-down" className="lg:w-[20%] gap-y-6 flex flex-col items-center">
           <img
             src="./assists/team2.png"
             className="lg:w-[77%] w-[90%]"

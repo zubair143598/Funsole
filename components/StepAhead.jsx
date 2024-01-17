@@ -29,26 +29,63 @@ const StepAhead = () => {
         </p>
       </div>
       <div className="flex gap-y-[5rem] lg:mt-0 mt-10 lg:flex-row  flex-col items-center  justify-evenly">
-        <div className="flex flex-col items-center">
-          <img src="./assists/setting.png" className="w-[150px] " alt="appDevelopment" />
-          <h2 className="text-[30px] font-semibold uppercase text-center mt-6" >Apps <br className=" hidden lg:block" /> Development</h2>
-        </div>
-        <div className="flex flex-col items-center" >
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
           
-          <img src="./assists/gameDevelopment.png" className="w-[150px]" alt="gameDevelopment" />
-          <h2 className="text-[30px] font-semibold uppercase text-center mt-6" >Apps <br className=" hidden lg:block" /> Development</h2>
+          className="flex flex-col items-center"
+        >
+          <img
+            src="./assists/setting.png"
+            className="w-[150px] "
+            alt="appDevelopment"
+          />
+          <h2 className="text-[30px] font-semibold uppercase text-center mt-6">
+            Apps <br className=" hidden lg:block" /> Development
+          </h2>
         </div>
-        <div className="flex flex-col items-center">
+        <div
+          data-aos="zoom-in"
           
-          <img src="./assists/digitalMarketing.png" className="w-[150px]" alt="digitalMarketing" />
-          <h2 className="text-[30px] font-semibold uppercase text-center mt-6" >Apps <br className=" hidden lg:block" /> Development</h2>
+          className="flex flex-col items-center"
+        >
+          <img
+            src="./assists/gameDevelopment.png"
+            className="w-[150px]"
+            alt="gameDevelopment"
+          />
+          <h2 className="text-[30px] font-semibold uppercase text-center mt-6">
+            Game <br className=" hidden lg:block" /> Development
+          </h2>
+        </div>
+        <div
+          data-aos="fade-left"
+         
+          data-aos-easing="ease-in-sine"
+          className="flex flex-col items-center"
+        >
+          <img
+            src="./assists/digitalMarketing.png"
+            className="w-[150px]"
+            alt="digitalMarketing"
+          />
+          <h2 className="text-[30px] font-semibold uppercase text-center mt-6">
+            Digital <br className=" hidden lg:block" /> Marketing
+          </h2>
         </div>
       </div>
       <div className="text-center py-[6rem]">
-      <button className=" bg-[#FFD936] hover:text-white hover:bg-[#DAB200] text-[18px] xl:text-[26px] font-medium uppercase px-8 py-3 rounded-lg text" >view more</button>
+        <button className=" bg-[#FFD936] hover:text-white hover:bg-[#DAB200] text-[18px] xl:text-[26px] font-medium uppercase px-8 py-3 rounded-lg text">
+          view more
+        </button>
       </div>
     </div>
   );
 };
 
 export default StepAhead;
+
+
+
+
+ 
