@@ -12,7 +12,7 @@ const Message = () => {
           MESSAGE FROM MR. TANVIR AHMED
         </h1>
         <img src="./assists/CEO.png" className="w-[300px] mt-14 p-3" alt="" />
-        <p className="lg:w-[80%] w-[95%] text-justify text-[24px] font-normal mt-8 leading-[40px] italic ">
+        <p className="lg:w-[80%] w-[85%]  text-justify lg:text-[24px] text-[20px] font-normal mt-8 leading-[40px] italic ">
           “I want our company to become the central hub and the unicorn of the
           IT and digital world. This vision may seem grand, but with our
           collective efforts, creativity, and relentless drive for innovation, I
@@ -20,7 +20,7 @@ const Message = () => {
           influence, and to make a meaningful impact. We aspire to set the pace
           in the digital world, shaping the future of the industry.”
         </p>
-        <h5 className=" text-[24px] font-bold mt-[3rem]">
+        <h5 className="text-[20px] lg:text-[24px]  font-bold mt-[3rem]">
           CEO FUNSOL TECHNOLOGIES
         </h5>
       </div>

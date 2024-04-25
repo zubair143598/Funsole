@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React, { useRef, useState } from "react";
+import Link from "next/link";
 
 const Technilogies = () => {
   const sliderRef = useRef(null);
@@ -46,7 +47,7 @@ const Technilogies = () => {
   return (
     <div className="bg-[#FFFDF4] lg:pt-[6rem] pt-[3rem] ">
       <div className="flex flex-col items-center">
-        <h1 className="text-[35px] text-center lg:text-[60px] font-bold  ">
+        <h1 className="text-[40px] px-4 text-center lg:text-[60px] font-bold  ">
           TECHNOLOGIES WE WORK WITH
         </h1>
       </div>
@@ -67,7 +68,7 @@ const Technilogies = () => {
             />
           </div>
           <div>
-            <img className=" px-3" src="/assists/android.png" alt="" />
+            <img className=" px-3"  src="/assists/android.png" alt="" />
           </div>
           <div>
             <img className=" px-3" src="/assists/kotlin.png" alt="" />
@@ -95,10 +96,12 @@ const Technilogies = () => {
             Have a question in mind? <br />
             Let’s talk about it.
           </h3>
-
+          <Link href="/Contact" className="flex items-center">
+            
           <button className=" font-medium mt-6 bg-[#FFD936] hover:bg-[#DAB200] hover:text-white text-[24px] uppercase px-4 py-2 rounded-lg">
             Contact Us
           </button>
+          </Link>
         </div>
       </div>
     </div>

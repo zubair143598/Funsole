@@ -9,23 +9,10 @@ import {
   Card,
 } from "@material-tailwind/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar2 = () => {
   const [openNav, setOpenNav] = useState(false);
-  const [activeItem, setActiveItem] = useState("home");
-
-  const handleItemClick = (itemName) => {
-    setActiveItem(itemName);
-    localStorage.setItem("activeLinK", itemName)
-  };
-
-  // useEffect(() => {
-
-  //   const storedActiveLink= localStorage.setItem()
-
-  // }, [])
-
-  
 
   useEffect(() => {
     window.addEventListener(
@@ -34,7 +21,11 @@ const Navbar2 = () => {
     );
   }, []);
 
-  const navList = <></>;
+  const currentPathname = usePathname();
+
+  const isActiveLink = (pathname) => {
+    return pathname === currentPathname;
+  };
   return (
     <div className="absolute z-10 w-[100%] ">
       <Navbar className=" top-0 z-10 bg-opacity-0 border-0   rounded-none px-4 py-2 lg:px-8 lg:py-4">
@@ -45,126 +36,35 @@ const Navbar2 = () => {
               className=" block lg:mt-0 mt-5  cursor-pointer py-1.5 font-medium"
             >
               <Link
-                onClick={() => handleItemClick("home")}
-                className={`${
-                  activeItem === "home"
-                    ? " border-b-4 text-[#DAB200] border-[#DAB200]   "
-                    : "text-white"
-                }  hover:text-[#DAB200]   items-center`}
+                className="text-white
+                 hover:text-[#DAB200]   items-center"
                 href="/"
               >
                 <img src="./assists/logo.png" className="w-[168px]" alt="" />
               </Link>
             </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 hidden lg:block text-[18px] xl:text-[26px] font-medium  "
-            >
-              <Link
-                href="/"
-                onClick={() => handleItemClick("home")}
-                className={`${
-                  activeItem === "home"
-                    ? " border-b-4 text-[#DAB200] border-[#DAB200]   "
-                    : "text-white"
-                }  hover:text-[#DAB200]   items-center`}
+            {[
+              { href: "/", label: "Home" },
+              { href: "/AboutUs", label: "About Us" },
+              { href: "/Services", label: "Services" },
+              { href: "/Career", label: "Career" },
+              { href: "/Events", label: "Events" },
+              { href: "/Blog", label: "Blog" },
+            ].map((link, index) => (
+              <Typography
+                key={index}
+                as="li"
+                variant="small"
+                color="black"
+                className={`p-1 ${
+                  isActiveLink(link.href) ? "text-[#CBAB23] border-[#CBAB23] border-b-4 " : " text-white"
+                } hidden lg:block text-[18px] xl:text-[26px] font-medium`}
               >
-                Home
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 hidden lg:block text-[18px] xl:text-[26px] font-medium"
-            >
-              <Link
-                href="/AboutUs"
-                onClick={() => handleItemClick("AboutUs")}
-                className={`${
-                  activeItem === "AboutUs"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : " text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                About Us
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 hidden lg:block text-[18px] xl:text-[26px] font-medium  "
-            >
-              <Link
-                onClick={() => handleItemClick("Services")}
-                href="/Services"
-                className={` ${
-                  activeItem === "Services"
-                    ? "border-b-4 pb-2 text-[#DAB200] border-[#DAB200]"
-                    : "text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                Services
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 hidden text-white hover:text-[#DAB200] lg:block text-[18px] xl:text-[26px] font-medium"
-            >
-              <Link
-                href="/Career"
-                onClick={() => handleItemClick("Career")}
-                className={`${
-                  activeItem === "Career"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : "text-white"
-                }  hover:text-[#DAB200] items-center`}
-              >
-                Career
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 hidden text-white hover:text-[#DAB200] lg:block text-[18px] xl:text-[26px] font-medium"
-            >
-              <Link
-                href="/Events"
-                onClick={() => handleItemClick("Events")}
-                className={`${
-                  activeItem === "Events"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : "  text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                Events
-              </Link>
-            </Typography>
-
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 hidden text-white lg:block text-[18px] xl:text-[26px] font-medium"
-            >
-              <Link
-                href="/Blog"
-                onClick={() => handleItemClick("Blog")}
-                className={`${
-                  activeItem === "Blog"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : "text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                Blog
-              </Link>
-            </Typography>
+                <Link className="hover:text-[#DAB200] items-center" href={link.href} passHref>
+                  {link.label}
+                </Link>
+              </Typography>
+            ))}
             <Typography
               as="li"
               variant="small"
@@ -228,115 +128,26 @@ const Navbar2 = () => {
           </div>
         </div>
         <MobileNav open={openNav}>
-        <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 lg:hidden block text-[18px] xl:text-[26px] font-medium  "
-            >
-              <Link
-                href="/"
-                onClick={() => handleItemClick("home")}
-                className={`${
-                  activeItem === "home"
-                    ? " border-b-4 text-[#DAB200] border-[#DAB200]   "
-                    : "text-white"
-                }  hover:text-[#DAB200]   items-center`}
-              >
-                Home
-              </Link>
-            </Typography>
+          {[
+            { href: "/", label: "Home" },
+            { href: "/AboutUs", label: "About Us" },
+            { href: "/Services", label: "Services" },
+            { href: "/Career", label: "Career" },
+            { href: "/Events", label: "Events" },
+            { href: "/Blog", label: "Blog" },
+          ].map((link, index) => (
             <Typography
+              key={index}
               as="li"
               variant="small"
               color="black"
               className="p-1 lg:hidden block text-[18px] xl:text-[26px] font-medium"
             >
-              <Link
-                href="/AboutUs"
-                onClick={() => handleItemClick("AboutUs")}
-                className={`${
-                  activeItem === "AboutUs"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : " text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                About Us
+              <Link className={` hover:text-[#DAB200] items-center ${isActiveLink(link.href) ? "text-[#CBAB23] " : "text-white"}`} href={link.href} passHref>
+                {link.label}
               </Link>
             </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 lg:hidden block text-[18px] xl:text-[26px] font-medium  "
-            >
-              <Link
-                onClick={() => handleItemClick("Services")}
-                href="/Services"
-                className={` ${
-                  activeItem === "Services"
-                    ? "border-b-4 pb-2 text-[#DAB200] border-[#DAB200]"
-                    : "text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                Services
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 lg:hidden text-white hover:text-[#DAB200] block text-[18px] xl:text-[26px] font-medium"
-            >
-              <Link
-                href="/Career"
-                onClick={() => handleItemClick("Career")}
-                className={`${
-                  activeItem === "Career"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : "text-white"
-                }  hover:text-[#DAB200] items-center`}
-              >
-                Career
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 lg:hidden block text-white hover:text-[#DAB200] text-[18px] xl:text-[26px] font-medium"
-            >
-              <Link
-                href="/Events"
-                onClick={() => handleItemClick("Events")}
-                className={`${
-                  activeItem === "Events"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : "  text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                Events
-              </Link>
-            </Typography>
-
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 lg:before:after:hidden text-white block text-[18px] xl:text-[26px] font-medium"
-            >
-              <Link
-                href="/Blog"
-                onClick={() => handleItemClick("Blog")}
-                className={`${
-                  activeItem === "Blog"
-                    ? " border-b-4 text-[#DAB200] pb-2 border-[#DAB200]   "
-                    : "text-white"
-                }  hover:text-[#DAB200]  items-center`}
-              >
-                Blog
-              </Link>
-            </Typography>
+          ))}
         </MobileNav>
       </Navbar>
     </div>

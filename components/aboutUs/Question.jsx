@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Question = () => {
@@ -10,9 +11,12 @@ const Question = () => {
             Let’s talk about it.
           </h3>
 
+          <Link href="/Contact" className="flex items-center">
+            
           <button className=" font-medium mt-6 bg-[#FFD936] hover:bg-[#DAB200] hover:text-white text-[24px] uppercase px-4 py-2 rounded-lg">
             Contact Us
           </button>
+          </Link>
         </div>
       </div>
     

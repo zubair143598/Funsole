@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -40,18 +41,20 @@ const Hero = () => {
             src="./assists/heroImg1.png"
             alt=""
           />
-          <div className="absolute gap-y-10 text-white left-3 lg:left-[10rem] z-40 flex flex-col justify-center w-[100%] lg:w-[50%] top-[33%]">
+          <div className="absolute gap-y-10 text-white left-3 lg:left-[10rem] z-40 flex flex-col justify-center w-[100%] lg:w-[50%] px-3 top-[33%]">
             <h1 className=" uppercase text-[40px] font-bold lg:text-[60px]">
               Accelerate your <span className="text-[#DAB200]">digital</span>{" "}
               world
             </h1>
-            <p className="text-[20px] font-medium  lg:text-[25px]">
+            <p className=" font-medium  text-[25px]">
               Discover the transformational impact of our <br /> developmental
               services can have on your business.{" "}
             </p>
-            <button className="uppercase bg-[#DAB200] w-[12rem] text-[18px] text-black py-4 font-bold rounded-lg">
-              Get in touch
-            </button>
+            <Link href="/Contact" className="flex items-center">
+                <button className=" bg-[#FFD936] pb-2 hover:bg-[#DAB200] text-[18px] xl:text-[26px] font-medium uppercase px-4 py-2 rounded-lg text">
+                  Contact Us
+                </button>
+              </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
