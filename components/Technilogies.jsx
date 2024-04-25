@@ -46,7 +46,7 @@ const Technilogies = () => {
   return (
     <div className="bg-[#FFFDF4] lg:pt-[6rem] pt-[3rem] ">
       <div className="flex flex-col items-center">
-        <h1 className="text-[30px] lg:text-[60px] font-bold  ">
+        <h1 className="text-[35px] text-center lg:text-[60px] font-bold  ">
           TECHNOLOGIES WE WORK WITH
         </h1>
       </div>
@@ -91,13 +91,14 @@ const Technilogies = () => {
       </div>
       <div className=" flex items-center bg-[url('/assists/technologiesBg.png')] h-[390px] bg-cover  bg-no-repeat ">
         <div className=" lg:ms-[10rem]   ms-10 lg:mt-[2rem]">
-          <h3 className=" text-[24px] mt-7 font-medium text-white lg:text-[30px] ">Have a question in mind? <br />Let’s talk about it.</h3>
-         
+          <h3 className=" text-[24px] mt-7 font-medium text-white lg:text-[30px] ">
+            Have a question in mind? <br />
+            Let’s talk about it.
+          </h3>
+
           <button className=" font-medium mt-6 bg-[#FFD936] hover:bg-[#DAB200] hover:text-white text-[24px] uppercase px-4 py-2 rounded-lg">
             Contact Us
           </button>
-          
-        
         </div>
       </div>
     </div>

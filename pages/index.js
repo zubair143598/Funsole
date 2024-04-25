@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import AboutUs from "@/components/AboutUs";
-import Footer from "@/components/Footer";
+
 import Hero from "@/components/Hero";
 import LifeAt from "@/components/LifeAt";
 import Message from "@/components/Message";
@@ -10,6 +10,7 @@ import Technilogies from "@/components/Technilogies";
 import WhyJoin from "@/components/WhyJoin";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import Navbar2 from "@/components/Navbar2";
 
 
 
@@ -22,7 +23,7 @@ export default function Home() {
   }, [])
   return (
     <main className="">
-     
+     <Navbar2/>
       <Hero/>
       <StepAhead/>
       <AboutUs/>
@@ -31,7 +32,7 @@ export default function Home() {
       <Message/>
       <WhyJoin/>
       <Technilogies/>
-      <Footer/>
+
     </main>
   )
 }

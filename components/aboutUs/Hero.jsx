@@ -18,7 +18,7 @@ const Hero = () => {
         centeredSlides={true}
         autoplay={{
           delay: 3500,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         pagination={{
           clickable: true,
@@ -27,12 +27,20 @@ const Hero = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className="relative">
           <img
-            src="./assists/2024.png"
-            className="h-[56rem] w-[100%] object-cover object-center"
+            className="h-[56rem] object-cover object-center w-[100%]"
+            src="./assists/team4.png"
             alt=""
           />
+          <div className="absolute text-white text-center z-40 flex flex-col justify-center w-[100%] top-[40%]">
+            <h1 className=" uppercase text-[40px] font-bold lg:text-[60px]">
+              About<span className="text-[#DAB200]"> US</span> 
+            </h1>
+            <p className="text-[20px] font-medium  lg:text-[34px]">
+            We Are a one stop solution for all your mobile development ideas.
+            </p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
@@ -54,25 +62,10 @@ const Hero = () => {
             </button>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative">
-          <img
-            className="h-[56rem] object-cover object-center w-[100%]"
-            src="./assists/heroImg2.png"
-            alt=""
-          />
-          <div className="absolute text-white text-center z-40 flex flex-col justify-center w-[100%] top-[40%]">
-            <h1 className=" uppercase text-[40px] font-bold lg:text-[60px]">
-              one step <span className="text-[#DAB200]">ahead</span> in
-              technology
-            </h1>
-            <p className="text-[25px] font-medium  lg:text-[40px]">
-              Design. Development. Consultancy.
-            </p>
-          </div>
-        </SwiperSlide>
+        
       </Swiper>
-    </div>
-  );
-};
+    </div>  
+  )
+}
 
-export default Hero;
+export default Hero

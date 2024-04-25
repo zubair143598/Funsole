@@ -1,5 +1,5 @@
 import React from "react";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 const AboutUs = () => {
   return (
@@ -23,7 +23,9 @@ const AboutUs = () => {
             alt="appDevelopment"
           />
           <h2 className="text-[40px] font-bold  uppercase text-center mt-6">
-          <CountUp end={250} duration={2} /><span className=" font-bold">+</span> <br className=" hidden lg:block" />{" "}
+            <CountUp end={250} duration={2} />
+            <span className=" font-bold">+</span>{" "}
+            <br className=" hidden lg:block" />{" "}
             <span className="text-[18px]">Published app</span>{" "}
           </h2>
         </div>
@@ -34,8 +36,13 @@ const AboutUs = () => {
             alt="gameDevelopment"
           />
           <h2 className="text-[40px] font-bold  uppercase text-center mt-6">
-          <CountUp start={0} onStart={() => console.log('Started! 💨')} end={500} duration={2}/>
-          M+ <br className=" hidden lg:block" />{" "}
+            <CountUp
+              start={0}
+              onStart={() => console.log("Started! 💨")}
+              end={500}
+              duration={2}
+            />
+            M+ <br className=" hidden lg:block" />{" "}
             <span className="text-[18px]">INSTALLS ON PLAYSTORE</span>{" "}
           </h2>
         </div>
@@ -46,28 +53,32 @@ const AboutUs = () => {
             alt="digitalMarketing"
           />
           <h2 className="text-[40px] font-bold  uppercase text-center mt-6">
-          <CountUp end={200} duration={2}/>+ <br className=" hidden lg:block" />{" "}
+            <CountUp end={200} duration={2} />+{" "}
+            <br className=" hidden lg:block" />
             <span className="text-[18px]">Strong Team</span>{" "}
           </h2>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:gap-y-0 gap-y-10 lg:grid-cols-2 items-center mt-[6rem]" >
-        <div   className=" ps-3">
-            <h2 className="text-[40px] font-bold">The vision of Funsol Technologies</h2>
-            <p className="text-[25px] mt-6">We have to make Funsol Technologies a Unicorn <br /> in the IT Industry.</p>
+      <div className="grid grid-cols-1 lg:gap-y-0 gap-y-10 lg:grid-cols-2 items-center mt-[6rem]">
+        <div className=" ps-3">
+          <h2 className="text-[40px] font-bold">
+            The vision of Funsol Technologies
+          </h2>
+          <p className="text-[25px] mt-6">
+            We have to make Funsol Technologies a Unicorn <br /> in the IT
+            Industry.
+          </p>
         </div>
-        <div  data-aos="fade-down" className=" flex justify-center">
-            <img  src="./assists/undertaking.png" className="lg:w-[650px] w-[90%] " alt="" />
+        <div data-aos="fade-down" className=" flex justify-center">
+          <img
+            src="./assists/undertaking.png"
+            className="lg:w-[650px] w-[90%] "
+            alt=""
+          />
         </div>
-
       </div>
     </div>
   );
 };
 
 export default AboutUs;
-
-
-
-
-

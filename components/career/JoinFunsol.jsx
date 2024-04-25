@@ -1,21 +1,19 @@
 import React from "react";
 
-const WhyJoin = () => {
+const JoinFunsol = () => {
   return (
     <div
       data-aos-duration="3000"
       data-aos="fade-up"
-      className="bg-[#F8F8F8] text-center py-[3rem] lg:py-[6rem] "
+      className="bg-[#FEF4CB] text-center py-[3rem] lg:py-[6rem] "
     >
       <div className="flex flex-col items-center">
         <h1 className="text-[30px] lg:text-[60px] font-bold  ">
           WHY JOIN FUNSOL?
         </h1>
-        <h5 className=" text-[24px] font-bold mt-[1rem]">
-          TECHNOLOGISTS, CREATORS, PROGRAMMERS AND INDEPENDENT THINKERS…
-        </h5>
+        
 
-        <p className="lg:w-[70%] text-justify w-[95%] text-[22px] lg:text-[24px] font-normal mt-8 leading-[40px] italic ">
+        <p className="lg:w-[70%]  w-[95%] text-[22px] lg:text-[25px] font-medium mt-8 leading-[40px]">
           Technologists, creators, programmers, and independent thinkers… You’ve
           arrived at the proper location. For more than 15 years, Funsol
           Technologies has provided a diverse range of client organizations with
@@ -26,10 +24,10 @@ const WhyJoin = () => {
           tools you need to succeed and win the respect you deserve on a global
           scale.
         </p>
-        <img src="./assists/join.png" className="w-[600px] mt-14 p-3" alt="" />
+        <img src="./assists/whyjoin.png" className="lg:w-[50%] mt-14 p-3" alt="" />
       </div>
     </div>
   );
 };
 
-export default WhyJoin;
+export default JoinFunsol;

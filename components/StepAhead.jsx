@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const StepAhead = () => {
   return (
@@ -32,7 +33,6 @@ const StepAhead = () => {
         <div
           data-aos="fade-right"
           data-aos-easing="ease-in-sine"
-          
           className="flex flex-col items-center"
         >
           <img
@@ -44,11 +44,7 @@ const StepAhead = () => {
             Apps <br className=" hidden lg:block" /> Development
           </h2>
         </div>
-        <div
-          data-aos="zoom-in"
-          
-          className="flex flex-col items-center"
-        >
+        <div data-aos="zoom-in" className="flex flex-col items-center">
           <img
             src="./assists/gameDevelopment.png"
             className="w-[150px]"
@@ -58,10 +54,10 @@ const StepAhead = () => {
             Game <br className=" hidden lg:block" /> Development
           </h2>
         </div>
-        <div
-          data-aos="fade-left"
-         
-          data-aos-easing="ease-in-sine"
+        <motion.div
+          initial={{ opacity: 0, x: 150 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 2 }}
           className="flex flex-col items-center"
         >
           <img
@@ -72,7 +68,7 @@ const StepAhead = () => {
           <h2 className="text-[30px] font-semibold uppercase text-center mt-6">
             Digital <br className=" hidden lg:block" /> Marketing
           </h2>
-        </div>
+        </motion.div>
       </div>
       <div className="text-center py-[6rem]">
         <button className=" bg-[#FFD936] hover:text-white hover:bg-[#DAB200] text-[18px] xl:text-[26px] font-medium uppercase px-8 py-3 rounded-lg text">
@@ -84,8 +80,3 @@ const StepAhead = () => {
 };
 
 export default StepAhead;
-
-
-
-
- 
