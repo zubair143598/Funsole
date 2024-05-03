@@ -98,7 +98,7 @@ const Technilogies = () => {
           </h3>
           <Link href="/Contact" className="flex items-center">
             
-          <button className=" font-medium mt-6 bg-[#FFD936] hover:bg-[#DAB200] hover:text-white text-[24px] uppercase px-4 py-2 rounded-lg">
+          <button className=" font-medium mt-6 bg-[red] text-white hover:text-black text-[22px] uppercase px-7 py-3 rounded-lg">
             Contact Us
           </button>
           </Link>

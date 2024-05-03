@@ -34,8 +34,8 @@ const Footer = () => {
           ].map((link, index) => (
             <Link key={index} href={link.href}>
               <li
-                className={`hover:text-[#CBAB23] text-[18px] lg:text-[22px] font-medium py-2 ${
-                  isActiveLink(link.href) ? "text-[#CBAB23]" : ""
+                className={`hover:text-[red] text-[18px] lg:text-[22px] font-medium py-2 ${
+                  isActiveLink(link.href) ? "text-[red]" : ""
                 }`}
               >
                 {link.label}
@@ -56,8 +56,8 @@ const Footer = () => {
           ].map((link, index) => (
             <Link key={index} href={link.href}>
               <li
-                className={`hover:text-[#CBAB23] text-[22px] font-medium py-2 ${
-                  isActiveLink(link.href) ? "text-[#CBAB23]" : ""
+                className={`hover:text-[red] text-[22px] font-medium py-2 ${
+                  isActiveLink(link.href) ? "text-[red]" : ""
                 }`}
               >
                 {link.label}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const StepAhead = () => {
   return (
-    <div className=" bg-[#FEF4CB] ">
+    <div className=" bg-[#cbd5e1] ">
       <div className=" text-center py-[4rem] px-3 lg:py-[6rem] ">
         <h1 className="uppercase text-[40px] lg:text-[60px]  font-semibold">
           One step ahead in technology
@@ -71,7 +71,7 @@ const StepAhead = () => {
         </motion.div>
       </div>
       <div className="text-center py-[6rem]">
-        <button className=" bg-[#FFD936] hover:text-white hover:bg-[#DAB200] text-[18px] xl:text-[26px] font-medium uppercase px-8 py-3 rounded-lg text">
+        <button className=" bg-[#334155] hover:text-black text-white  text-[18px] xl:text-[22px] font-medium uppercase px-8 py-3 rounded-lg text">
           view more
         </button>
       </div>

@@ -7,6 +7,7 @@ import {
   Button,
   IconButton,
   Card,
+  Collapse,
 } from "@material-tailwind/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -27,20 +28,20 @@ const Navbar2 = () => {
     return pathname === currentPathname;
   };
   return (
-    <div className="absolute z-10 w-[100%] ">
-      <Navbar className=" top-0 z-10 bg-opacity-0 border-0   rounded-none px-4 py-2 lg:px-8 lg:py-4">
-        <div className=" items-center text-white ">
-          <div className="flex mt-2 mb-4 justify-between flex-row-reverse lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 items-center ">
+    <div className="  w-[100%] ">
+      <Navbar className=" bg-[#334155] border-0  py-2 rounded-none px-4 lg:px-8 ">
+        <div className=" items-center  ">
+          <div className="flex  lg:mb-0 lg:mt-0 justify-between flex-row-reverse  lg:flex-row lg:items-center lg:gap-6 items-center ">
             <Typography
               as="li"
-              className=" block lg:mt-0 mt-5  cursor-pointer py-1.5 font-medium"
+              className=" block lg:mt-0 cursor-pointer  font-medium"
             >
               <Link
                 className="text-white
-                 hover:text-[#DAB200]   items-center"
+                 hover:text-[red]   items-center"
                 href="/"
               >
-                <img src="./assists/logo.png" className="w-[168px]" alt="" />
+                <img src="./assists/Vivatech-Company-Logo.png" className=" px-2 w-[138px]" alt="logo" />
               </Link>
             </Typography>
             {[
@@ -57,10 +58,10 @@ const Navbar2 = () => {
                 variant="small"
                 color="black"
                 className={`p-1 ${
-                  isActiveLink(link.href) ? "text-[#CBAB23] border-[#CBAB23] border-b-4 " : " text-white"
-                } hidden lg:block text-[18px] xl:text-[26px] font-medium`}
+                  isActiveLink(link.href) ? "text-[red] border-[red] border-b-4 " : " text-white"
+                } hidden lg:block text-[18px] xl:text-[20px] font-medium`}
               >
-                <Link className="hover:text-[#DAB200] items-center" href={link.href} passHref>
+                <Link className="hover:text-[red] items-center" href={link.href} passHref>
                   {link.label}
                 </Link>
               </Typography>
@@ -69,9 +70,9 @@ const Navbar2 = () => {
               as="li"
               variant="small"
               color="black"
-              className="p-1 hidden text-white text-[18px] xl:text-[26px] font-medium lg:block "
+              className="p-1 hidden text-white text-[18px] xl:text-[20px] font-medium lg:block "
             >
-              <p className="flex hover:text-[#DAB200] items-center">
+              <p className="flex hover:text-[red] items-center">
                 <FaPhone /> +92-336-9628075
               </p>
             </Typography>
@@ -82,7 +83,7 @@ const Navbar2 = () => {
               className="p-1 hidden hover:text-white lg:block font-normal"
             >
               <Link href="/Contact" className="flex items-center">
-                <button className=" bg-[#FFD936] pb-2 hover:bg-[#DAB200] text-[18px] xl:text-[26px] font-medium uppercase px-4 py-2 rounded-lg text">
+                <button className=" bg-[red]  hover:bg-[red] text-white hover:text-[black] text-[18px] xl:text-[20px] font-medium uppercase px-5 py-4 rounded-lg text">
                   Contact Us
                 </button>
               </Link>
@@ -127,7 +128,7 @@ const Navbar2 = () => {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {[
             { href: "/", label: "Home" },
             { href: "/AboutUs", label: "About Us" },
@@ -141,14 +142,14 @@ const Navbar2 = () => {
               as="li"
               variant="small"
               color="black"
-              className="p-1 lg:hidden block text-[18px] xl:text-[26px] font-medium"
+              className="p-1 lg:hidden block text-[18px] xl:text-[20px] font-medium"
             >
               <Link className={` hover:text-[#DAB200] items-center ${isActiveLink(link.href) ? "text-[#CBAB23] " : "text-white"}`} href={link.href} passHref>
                 {link.label}
               </Link>
             </Typography>
           ))}
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </div>
   );

@@ -43,7 +43,7 @@ const LifeAt = () => {
       </div>
       <div className="flex justify-center pt-[2rem] lg:pt-[6rem]">
       <Link href="/Events" className="flex items-center">
-        <button className=" font-medium bg-[#FFD936] hover:bg-[#DAB200] hover:text-white text-[24px] uppercase px-4 py-2 rounded-lg text">
+        <button className=" font-medium bg-[red] hover:bg-[red] hover:text-black text-white text-[22px] uppercase px-7 py-3 rounded-lg text">
           View more
         </button>
         </Link>

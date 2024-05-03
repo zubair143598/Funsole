@@ -4,11 +4,14 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
       colors:{
-        "orange":"#FADA4F"
+        "orange":"#FADA4F",
+        "red":"#AF0205",
+        "light_red":"#AF020",
       },
      screens :{
       sm:"640px",
@@ -22,5 +25,7 @@ module.exports = {
      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+],
 }

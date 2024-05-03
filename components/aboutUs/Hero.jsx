@@ -36,9 +36,9 @@ const Hero = () => {
           />
           <div className="absolute text-white text-center z-40 flex flex-col justify-center w-[100%] top-[40%]">
             <h1 className=" uppercase text-[40px] font-bold lg:text-[60px]">
-              About<span className="text-[#DAB200]"> US</span> 
+              About<span className="text-[red]"> US</span> 
             </h1>
-            <p className="font-medium  text-[34px]">
+            <p className="font-medium text-[24px] lg:text-[34px]">
             We Are a one stop solution for all your mobile development ideas.
             </p>
           </div>
@@ -51,7 +51,7 @@ const Hero = () => {
           />
           <div className="absolute gap-y-10 text-white left-3 lg:left-[10rem] z-40 flex flex-col justify-center w-[100%] lg:w-[50%] px-3 top-[33%]">
             <h1 className=" uppercase text-[40px] font-bold lg:text-[60px]">
-              Accelerate your <span className="text-[#DAB200]">digital</span>{" "}
+              Accelerate your <span className="text-[red]">digital</span>{" "}
               world
             </h1>
             <p className=" font-medium  text-[25px]">
@@ -59,7 +59,7 @@ const Hero = () => {
               services can have on your business.{" "}
             </p>
             <Link href="/Contact" className="flex items-center">
-                <button className=" bg-[#FFD936] pb-2 hover:bg-[#DAB200] text-[18px] xl:text-[26px] font-medium uppercase px-4 py-2 rounded-lg text">
+                <button className=" bg-[red] pb-2 hover:text-black text-[18px] xl:text-[22px] font-medium uppercase px-4 py-2 rounded-lg text">
                   Contact Us
                 </button>
               </Link>
