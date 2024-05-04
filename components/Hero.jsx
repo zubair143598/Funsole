@@ -30,16 +30,16 @@ const Hero = () => {
       >
         <SwiperSlide>
           <img
-            src="./assists/2024.png"
+            src="./assists/heroPic2.jpeg"
             className="h-[45rem] w-[100%] object-cover object-center"
-            alt=""
+            alt="heroPic2"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             className="h-[45rem] w-[100%] object-cover object-center"
             src="./assists/heropic1.jpg"
-            alt="heroPic2"
+            alt="heroPic1"
           />
           <div className="absolute gap-y-5 text-white left-3 lg:left-[10rem] z-40 flex flex-col justify-center w-[100%] lg:w-[50%] px-3 top-[28%]">
             <h1 className=" uppercase text-[40px] font-bold lg:text-[60px]">
@@ -47,7 +47,7 @@ const Hero = () => {
               world
             </h1>
             <p className=" font-medium  text-[25px]">
-              Discover the transformational impact of our <br className=" lg:block hidden" /> developmental
+              Discover the transformational impact of our <br className=" lg:block hid" /> developmental
               services can have on your business.{" "}
             </p>
             <Link href="/Contact" className="flex items-center">

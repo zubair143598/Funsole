@@ -12,6 +12,7 @@ module.exports = {
         "orange":"#FADA4F",
         "red":"#AF0205",
         "light_red":"#AF020",
+        "slate":"#334155",
       },
      screens :{
       sm:"640px",

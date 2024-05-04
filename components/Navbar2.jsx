@@ -29,7 +29,7 @@ const Navbar2 = () => {
   };
   return (
     <div className="  w-[100%] ">
-      <Navbar className=" bg-[#334155] border-0  py-2 rounded-none px-4 lg:px-8 ">
+      <Navbar className="bg-[#cbd5e1] lg:bg-[#e2e8f0] border-0  py-2 rounded-none px-4 lg:px-8 ">
         <div className=" items-center  ">
           <div className="flex  lg:mb-0 lg:mt-0 justify-between flex-row-reverse  lg:flex-row lg:items-center lg:gap-6 items-center ">
             <Typography
@@ -37,7 +37,7 @@ const Navbar2 = () => {
               className=" block lg:mt-0 cursor-pointer  font-medium"
             >
               <Link
-                className="text-white
+                className="text-black
                  hover:text-[red]   items-center"
                 href="/"
               >
@@ -58,7 +58,7 @@ const Navbar2 = () => {
                 variant="small"
                 color="black"
                 className={`p-1 ${
-                  isActiveLink(link.href) ? "text-[red] border-[red] border-b-4 " : " text-white"
+                  isActiveLink(link.href) ? "text-[red] border-[red] border-b-4 " : " text-black"
                 } hidden lg:block text-[18px] xl:text-[20px] font-medium`}
               >
                 <Link className="hover:text-[red] items-center" href={link.href} passHref>
@@ -70,7 +70,7 @@ const Navbar2 = () => {
               as="li"
               variant="small"
               color="black"
-              className="p-1 hidden text-white text-[18px] xl:text-[20px] font-medium lg:block "
+              className="p-1 hidden text-[18px] xl:text-[20px] font-medium lg:block "
             >
               <p className="flex hover:text-[red] items-center">
                 <FaPhone /> +92-336-9628075
@@ -83,7 +83,7 @@ const Navbar2 = () => {
               className="p-1 hidden hover:text-white lg:block font-normal"
             >
               <Link href="/Contact" className="flex items-center">
-                <button className=" bg-[red]  hover:bg-[red] text-white hover:text-[black] text-[18px] xl:text-[20px] font-medium uppercase px-5 py-4 rounded-lg text">
+                <button className=" bg-[#334155]  hover:bg-[#64748b] text-white hover:text-black text-[18px] xl:text-[20px] font-medium uppercase px-5 py-4 rounded-lg text">
                   Contact Us
                 </button>
               </Link>
@@ -91,8 +91,9 @@ const Navbar2 = () => {
 
             <IconButton
               variant="text"
-              className=" h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className=" h-6 w-6  text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
+              
               onClick={() => setOpenNav(!openNav)}
             >
               {openNav ? (
@@ -144,7 +145,7 @@ const Navbar2 = () => {
               color="black"
               className="p-1 lg:hidden block text-[18px] xl:text-[20px] font-medium"
             >
-              <Link className={` hover:text-[#DAB200] items-center ${isActiveLink(link.href) ? "text-[#CBAB23] " : "text-white"}`} href={link.href} passHref>
+              <Link className={` hover:text-[red] items-center ${isActiveLink(link.href) ? "text-[red] " : "text-black"}`} href={link.href} passHref>
                 {link.label}
               </Link>
             </Typography>
