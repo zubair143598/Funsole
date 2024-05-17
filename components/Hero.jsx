@@ -30,7 +30,7 @@ const Hero = () => {
       >
         <SwiperSlide>
           <img
-            src="./assists/heroPic2.jpeg"
+            src="./assists/teamPic4.jpg"
             className="h-[45rem] w-[100%] object-cover object-center"
             alt="heroPic2"
           />

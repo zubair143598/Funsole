@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const StepAhead = () => {
   return (
-    <div className=" bg-[#cbd5e1] ">
+    <div className=" bg-[#FEF4CB]  ">
       <div className=" text-center py-[4rem] px-3 lg:py-[6rem] ">
         <h1 className="uppercase text-[40px] lg:text-[60px]  font-semibold">
           One step ahead in technology
         </h1>
-        <p className=" lg:text-[22px] text-[18px] text-justify mt-6 leading-[35px] tracking-[2px]  lg:px-[4rem] xl:px-[11rem]">
+        <p className=" lg:text-[22px] text-center text-[24px] mt-6 leading-[35px] tracking-[2px]  lg:px-[4rem] xl:px-[11rem]">
           Channeling the power of advanced technology blended with a dash of
           innovative spirit, Funsol Technologies embodies the principle of
           unity, firmly professing “We Can” over “I Can.” Our strength lies in

@@ -9,8 +9,8 @@ const Hero = () => {
         src="./assists/heroImg2.png"
         alt=""
       />
-      <div className=" text-white text-center z-40 flex flex-col justify-center w-[100%] top-[40%]">
-        <h1 className=" uppercase text-[40px] font-bold lg:text-[60px]">
+      <div className="  text-center z-40 flex flex-col justify-center w-[100%] top-[40%]">
+        <h1 className=" uppercase text-[40px] font-bold  lg:text-[60px]">
           one step <span className="text-[#DAB200]">ahead</span> in technology
         </h1>
         <p className="text-[25px] font-medium  lg:text-[40px]">

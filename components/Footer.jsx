@@ -29,7 +29,7 @@ const Footer = () => {
             { href: "/", label: "Home" },
             { href: "/AboutUs", label: "About Us" },
             { href: "/Services", label: "Services" },
-            { href: "/Careers", label: "Careers" },
+            { href: "/Career", label: "Career" },
             { href: "/Blog", label: "Blog" },
           ].map((link, index) => (
             <Link key={index} href={link.href}>
@@ -51,7 +51,7 @@ const Footer = () => {
             { href: "/", label: "Home" },
             { href: "/AboutUs", label: "About Us" },
             { href: "/Services", label: "Services" },
-            { href: "/Careers", label: "Careers" },
+            { href: "/Career", label: "Career" },
             { href: "/Blog", label: "Blog" },
           ].map((link, index) => (
             <Link key={index} href={link.href}>

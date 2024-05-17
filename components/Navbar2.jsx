@@ -29,7 +29,7 @@ const Navbar2 = () => {
   };
   return (
     <div className="  w-[100%] ">
-      <Navbar className="bg-[#cbd5e1] lg:bg-[#e2e8f0] border-0  py-2 rounded-none px-4 lg:px-8 ">
+      <Navbar className="bg-white lg:bg-white border-0  py-2 rounded-none px-4 lg:px-8 ">
         <div className=" items-center  ">
           <div className="flex  lg:mb-0 lg:mt-0 justify-between flex-row-reverse  lg:flex-row lg:items-center lg:gap-6 items-center ">
             <Typography
@@ -41,7 +41,11 @@ const Navbar2 = () => {
                  hover:text-[red]   items-center"
                 href="/"
               >
-                <img src="./assists/Vivatech-Company-Logo.png" className=" px-2 w-[138px]" alt="logo" />
+                <img
+                  src="./assists/Vivatech-Company-Logo.png"
+                  className=" px-2 w-[138px]"
+                  alt="logo"
+                />
               </Link>
             </Typography>
             {[
@@ -58,10 +62,16 @@ const Navbar2 = () => {
                 variant="small"
                 color="black"
                 className={`p-1 ${
-                  isActiveLink(link.href) ? "text-[red] border-[red] border-b-4 " : " text-black"
+                  isActiveLink(link.href)
+                    ? "text-[red] border-[red] border-b-4 "
+                    : " text-black"
                 } hidden lg:block text-[18px] xl:text-[20px] font-medium`}
               >
-                <Link className="hover:text-[red] items-center" href={link.href} passHref>
+                <Link
+                  className="hover:text-[red] items-center"
+                  href={link.href}
+                  passHref
+                >
                   {link.label}
                 </Link>
               </Typography>
@@ -93,7 +103,6 @@ const Navbar2 = () => {
               variant="text"
               className=" h-6 w-6  text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
-              
               onClick={() => setOpenNav(!openNav)}
             >
               {openNav ? (
@@ -145,7 +154,13 @@ const Navbar2 = () => {
               color="black"
               className="p-1 lg:hidden block text-[18px] xl:text-[20px] font-medium"
             >
-              <Link className={` hover:text-[red] items-center ${isActiveLink(link.href) ? "text-[red] " : "text-black"}`} href={link.href} passHref>
+              <Link
+                className={` hover:text-[red] items-center ${
+                  isActiveLink(link.href) ? "text-[red] " : "text-black"
+                }`}
+                href={link.href}
+                passHref
+              >
                 {link.label}
               </Link>
             </Typography>
